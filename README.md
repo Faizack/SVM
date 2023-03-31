@@ -20,7 +20,7 @@ WORKER3_KEY=0x...
 
 Run the following python command
 ```
-python main.py --num_workers 3 --num_rounds 10 
+python3 main.py --num_workers 3 --num_rounds 10 
 ```
 
 If you want to simulate a training session with evil workers, add the parameter `--num-evil` with the desired number of evil workers. 

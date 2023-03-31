@@ -51,7 +51,7 @@ class Application:
             for idx, worker in enumerate(self.workers):
                 print("idx",idx)
                 avg_dicts, topK_dicts, unsorted_scores = worker.evaluate(round)
-                unsorted_scores = [score[0].cpu().item()
+                unsorted_scores = [score[0].item()
                                    for score in unsorted_scores]
                 unsorted_scores.insert(idx, -1)
                 unsorted_scores = (idx, unsorted_scores)

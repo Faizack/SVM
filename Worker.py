@@ -55,7 +55,7 @@ class Worker:
         ranks, topk_dicts, unsorted_scores = self.model.eval(state_dicts)
         
         # add our own model for the averaging
-        topk_dicts.append(self.model.model.state_dict())
+        topk_dicts.append(self.model.model)
         
         # @TODO add blockchain functionality with sending the ranks to BC here
         
